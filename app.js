@@ -8,15 +8,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
         var sum = a+b;
-        var msgs = 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.';
+        var msgs = 'The sum of ' + a + ' and ' + b + ' is ' + sum +'.';
         var arr = [sum, msgs];
         console.log(arr);
         return[sum, msgs];
 }
-// sum(10,5);
+sum(10,5);
 
 // Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
+// testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -28,8 +28,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+     var product = a*b;
+     var productionResult = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
+     var arr = [product, productionResult];
+     console.log(arr);
+     return[product, productionResult];
 }
+
+multiply(10,10);
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
