@@ -13,10 +13,10 @@ function sum(a, b) { //eslint-disable-line
         console.log(arr);
         return[sum, msgs];
 }
-sum(10,5);
+// sum(10,5);
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -35,10 +35,10 @@ function multiply(a, b) { //eslint-disable-line
      return[product, productionResult];
 }
 
-multiply(10,10);
+// multiply(10,10);
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -51,12 +51,25 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+function sumAndMultiply(a, b, c) { //eslint-disable-line
+        
+        var sum0=sum(a,b)[0];
+        var sum1 = sum(sum0, c)[0];
+        var multi0 = multiply(a,b)[0];
+        var multi1 = multiply(multi0,c)[0];
+        var msg1 = '4 and 7 and 5 sum to 16.';
+        var msg2 = 'The product of 4 and 7 and 5 is 140.';
+        var msg3 = 'The result of ' + msg1 + ' and the result of ' + msg2 + '.';
+        var arr = [sum1, multi1,msg1,msg2,msg3];
+        console.log(arr);
+        return[sum1,multi1,msg1,msg2,msg3];
 }
 
+// sumAndMultiply(5,5,5);
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
