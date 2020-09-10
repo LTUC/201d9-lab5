@@ -36,7 +36,7 @@ function multiply(a, b) { //eslint-disable-line
 
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -50,18 +50,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    var sum = a + b + c;
-    var multiply = a * b * c;
-    var message1 = a + ' and ' + b + ' and ' + c + ' sum to ' + sum + '.';
-    var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply + '.';
-    var sumAndMultiplyArray = [sum, multiply, message1, message2];
+    var abSum = sum(a, b)[0];
+    var Thesum = sum(abSum, c)[0];
+    var abMultiply = multiply(a, b)[0];
+    var Themultiply = multiply(abMultiply, c)[0];
+    var message1 = a + ' and ' + b + ' and ' + c + ' sum to ' + Thesum + '.';
+    var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + Themultiply + '.';
+    var sumAndMultiplyArray = [Thesum, Themultiply, message1, message2];
     //console.log(sumAndMultiplyArray);
     return sumAndMultiplyArray;
-
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -115,7 +116,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
