@@ -100,11 +100,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+var multi1 = multiply(multiply(testArray[0],testArray[1])[0],testArray[2])[0];
+var output5 = 'The numbers '  + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + multi1 + '.';
+var arr3 = [multi1, output5];
+console.log(arr3);
+return arr3;
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
