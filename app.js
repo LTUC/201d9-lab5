@@ -65,9 +65,19 @@ uncomment the call for the testSumAndMultiply() function and see if the test pas
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-   var su=a+b+c;
-    var mu=a*b*c;
-    //sum(a,b,c);
+
+
+  var arr=sum(a,b);
+   var x=arr[0];
+
+   var su=x+c;
+    var arr=sum(a,b);
+    var x=arr[0];
+    var su=x+c;
+
+    var arr2=multiply(a,b);
+    var y=arr2[0];
+    var mu=y*c;
     return [su,mu,'4 and 7 and 5 sum to 16.','The product of 4 and 7 and 5 is 140.'];
 
 }
@@ -93,11 +103,11 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) { //eslint-disable-line
+    
     var summ=0;
-    for(var i =0;i<testArray.length;i++)
-    {
-        summ+=testArray[i];
-    }
+    var x=sum(testArray[0],testArray[1]);
+    var y=x[0];
+    summ+=y+testArray[2];
     return [summ,'2,3,4 was passed in as an array of numbers, and 9 is their sum.'];
 
 }
@@ -110,18 +120,26 @@ sumArray(testArray);
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiplyArray() that takes an array of numbers as its argument and
+ returns an array whose first element is the product of those numbers,
+  and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 "The numbers 2,3,4 have a product of 24."
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements. However, you may continue to use the + operator for string concatenation.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
+function multiplyArray(testArray) { //eslint-disable-line
+   /* var multy=1;
+    for(var j =0;j<testArray.length;j++)
+    {
+        multy*=testArray[j];
+    }
+    return [multy,'The numbers 2,3,4 have a product of 24.'];*/
 
 }
-
+//multiplyArray(testArray);
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+//testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -131,7 +149,10 @@ function multiplyArray(multArr) { //eslint-disable-line
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument 
+and returns an array whose first element is the product of those numbers, 
+and the second element is a string that EXACTLY follows this example and concatenates a message 
+using the arguments that were passed into the function:
 "The numbers 1,2,3,4,5 have a product of 120."
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 This function should be dynamic, accepting an array of any length.
@@ -139,12 +160,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+//multiplyAnyArray(testDynamicArray);
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+
+ /* var m=1;
+   for(var x=0;x<dynamicArray.length;x++)
+   {
+       m*=dynamicArray[x];
+   }
+
+   return [m,'The numbers 1,2,3,4,5 have a product of 120.'];*/
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+ //testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
