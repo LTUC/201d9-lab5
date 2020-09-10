@@ -8,7 +8,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
         var sum = a+b;
-        var msgs = 'The sum of ' + a + 'and ' + b + 'is 15.';
+        var msgs = 'The sum of ' + a + ' and ' + b + ' is ' + sum;
         var arr = [sum, msgs];
         console.log(arr);
         return[sum, msgs];
