@@ -73,6 +73,9 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
  return array;
 }
 
+// I made a big mistake, and pushed the third problem solution to LTUC github, not mine, so I am writing 
+// this comment to make new change and push it to my master.
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
 
