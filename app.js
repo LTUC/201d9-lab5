@@ -65,9 +65,17 @@ uncomment the call for the testSumAndMultiply() function and see if the test pas
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-   var su=a+b+c;
+   /*var su=a+b+c;
     var mu=a*b*c;
-    //sum(a,b,c);
+    //sum(a,b,c);*/
+
+    var arr=sum(a,b);
+    var x=arr[0];
+    var su=x+c;
+
+    var arr2=multiply(a,b);
+    var y=arr2[0];
+    var mu=y*c;
     return [su,mu,'4 and 7 and 5 sum to 16.','The product of 4 and 7 and 5 is 140.'];
 
 }
