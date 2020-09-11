@@ -66,6 +66,7 @@ the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+    console.log('hello from problem 3')
  var sumTwo = a + b;
  var sumThree = sum(sumTwo,c);
  var multTwo = a*b;
