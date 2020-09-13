@@ -49,11 +49,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    var sum3=sum(a+b, c);
-    var multi=a*b*c;
+    var sum3=sum(sum(a,b)[0], c);
+    var multi=multiply(multiply(a,b)[0], c);
     var third= a+' and '+b+' and '+c+' sum to '+sum3[0]+'.';
-    var fourth='The product of '+a+' and '+b+' and '+c+' is '+multi+'.';
-    var ArrayRes=[sum3[0],multi,third,fourth];
+    var fourth='The product of '+a+' and '+b+' and '+c+' is '+multi[0]+'.';
+    var ArrayRes=[sum3[0],multi[0],third,fourth];
     return ArrayRes;
 
 }
@@ -74,9 +74,10 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-    var sum4=sum(testArray[0]+testArray[1], testArray[2]);
-    var msg4= sumArr[0]+','+sumArr[1]+','+sumArr[2]+' was passed in as an array of numbers, and '+sum4[0]+' is their sum.';
-    var ArrayRes4=[sum4[0],msg4];
+    var sum4=sum(sumArr[0], sumArr[1]);
+    var sum42=sum(sum4[0],sumArr[2]);
+    var msg4= sumArr[0]+','+sumArr[1]+','+sumArr[2]+' was passed in as an array of numbers, and '+sum42[0]+' is their sum.';
+    var ArrayRes4=[sum42[0],msg4];
     return ArrayRes4;
 }
 
@@ -95,9 +96,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-    var multi5=multiply(testArray[0]*testArray[1], testArray[2]);
-    var msg5= 'The numbers '+multArr[0]+','+multArr[1]+','+multArr[2]+' have a product of '+multi5[0]+'.';
-    var ArrayRes5=[multi5[0],msg5];
+    var multi5=multiply(multArr[0], multArr[1]);
+    var multi52=multiply(multi5[0],multArr[2]);
+    var msg5= 'The numbers '+multArr[0]+','+multArr[1]+','+multArr[2]+' have a product of '+multi52[0]+'.';
+    var ArrayRes5=[multi52[0],msg5];
     return ArrayRes5;
 }
 
@@ -122,15 +124,17 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
-    var multidynamic=dynamicArray[0];
+    var res;
+    var mul=1;
     
-    for(var i=0;i<dynamicArray.length-1;i++){
-        multidynamic*=dynamicArray[i+1];
+    for(var i=0;i<dynamicArray.length;i++){
+        res=multiply(mul,dynamicArray[i]);
+        mul=res[0];
+      
     }
-    var msg6='The numbers '+dynamicArray[0]+','+dynamicArray[1]+','+dynamicArray[2]+','+dynamicArray[3]+','+dynamicArray[4]+' have a product of '+multidynamic+'.';
+    var msg6='The numbers '+dynamicArray[0]+','+dynamicArray[1]+','+dynamicArray[2]+','+dynamicArray[3]+','+dynamicArray[4]+' have a product of '+mul+'.';
 
-    var ArrayRes6=[multidynamic,msg6]
+    var ArrayRes6=[mul,msg6]
     return ArrayRes6;
 
   
